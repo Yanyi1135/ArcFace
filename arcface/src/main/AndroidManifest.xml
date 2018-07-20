@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wasu.arcface">
+
+    <!-- camera -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <!-- sdcard -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- wifi internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity android:name=".PermissionAcitivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".DetecterActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".TextureCameraActivity" />
+        <activity android:name=".DetectionPermissionActivity" />
+    </application>
+
+</manifest>
