@@ -2,14 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wasu.arcface">
 
-    <!-- camera -->
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
 
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
-    <!-- sdcard -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- wifi internet -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -23,6 +26,13 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".TextureCameraActivity" />
         <activity android:name=".DetectionPermissionActivity" />
+        <activity android:name=".CameraActivity"></activity>
+
+        <service
+            android:name=".CameraService"
+            android:enabled="true" >
+        </service>
+
     </application>
 
 </manifest>
