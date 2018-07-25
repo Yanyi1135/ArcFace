@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="100dp"
+    android:paddingLeft="100dp"
+    android:paddingRight="100dp"
+    android:paddingTop="100dp"
+    tools:context="com.wasu.arcfacetest.MainActivity">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:onClick="detection"
+        android:text="detection"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="181dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:onClick="register"
+        android:text="register" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:onClick="onTakePicture"
+        android:text="Take" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:onClick="onStopService"
+        android:text="Stop" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:onClick="compare"
+        android:text="compare" />
+
+</LinearLayout>

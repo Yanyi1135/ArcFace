@@ -105,6 +105,7 @@ public class DetecterActivity extends Activity implements OnCameraListener, View
         mHandler = new Handler();
         try {
             mCamera = Camera.open(mCameraID);
+            Log.d("camera", String.valueOf(mCameraID));
         } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(getApplicationContext(), "摄像头开启失败", Toast.LENGTH_SHORT).show();

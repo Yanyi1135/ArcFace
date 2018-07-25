@@ -2,18 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wasu.arcface">
 
-    <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
 
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="true" />
-    <!-- wifi internet -->
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -26,10 +29,9 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".TextureCameraActivity" />
         <activity android:name=".DetectionPermissionActivity" />
-        <activity android:name=".CameraActivity"></activity>
 
         <service
-            android:name=".CameraService"
+            android:name="com.wasu.arcface.FaceDetectionService"
             android:enabled="true" >
         </service>
 

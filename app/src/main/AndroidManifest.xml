@@ -3,6 +3,7 @@
     package="com.wasu.arcfacetest">
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-feature android:name="android.hardware.camera"
         android:required="true" />
 
@@ -19,6 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name="com.wasu.arcface.FaceDetectionService"
+            android:enabled="true" >
+        </service>
     </application>
 
 </manifest>
